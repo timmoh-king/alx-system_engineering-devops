@@ -1,0 +1,2 @@
+#!/bin/bash
+grep passwd | cut -d: -f6
