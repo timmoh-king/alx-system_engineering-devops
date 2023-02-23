@@ -1,2 +1,2 @@
 #!/bin/bash
-grep passwd | cut -d: -f6
+sort /etc/passwd | cut -d : -f1,6
