@@ -1,8 +1,10 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
+# Bash script that displays
 # The content of the current directory in a list format
-# Where only the part of the name after the first dash is displayed
+# only the part of the name after the first dash is displayed
 
-LIST="$(ls)"
-for i in "$LIST"; do
+list=$(ls)
+for i in $list;
+do
 	echo "$i" | cut -d '-' -f2
 done
