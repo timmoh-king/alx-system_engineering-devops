@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script prints a string to infinity sleeping for 2 seconds
+# with each iteration
+while true;
+do
+	echo "To infinity and beyond"
+	sleep 2
+	trap 'echo I am invincible!!!' 15
+done
