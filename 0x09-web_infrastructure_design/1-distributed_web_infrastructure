@@ -1,0 +1,16 @@
+1. The client searches www.foobar.com on their browser
+2. The DNS takes in the domain name foobar in this case and tries to search for it's IP address
+3. The DNS server return the IP address which is now sent to the load balancer (HAproxy)
+4. The load balancer (HAproxy) is now able to distribute workload to the two 2 servers using the Least connections algorithm to balance workload and the server that carries less weight is given the first priority since the two servers have the same capabilities
+5. The load balancer (HAproxy) enables an Active-Active setup since all the servers are working co-currently to enhance scalability as well as high availability
+Active-Passive solution on the other hand will deploy on server that handles rewuests and a passive one that is on standby incase the first server fails
+6. Master-Slave replication enables data from one database server(the master) to be replicates to one or more other database servers(the slaves). The master logs the updates, which then ripple through to the slaves. This really helps in:
+- Scaling out solutions
+- Data security since the slave can act as backup
+- Long-distance data distribution
+7. The primary node is the only member that receives the write operations the replica node has read only properties ensuring system security
+
+SPOF
+1. Security issues incase the client searches for a harmful domain
+2. Security issues since there are no firewalls in the system in place to track traffic passing between the client and the server
+3. It is hard to monitor what information is retrieved from the server before it is sent back to the client

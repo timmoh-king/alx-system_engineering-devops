@@ -1,0 +1,13 @@
+1. The client searches www.foobar.com on their browser
+2. The DNS takes in the domain name foobar in this case and tries to search for it's IP address
+3. The DNS server return the IP address which is now sent to the server
+4. The web server (Nginx) contains static information on the domain
+5. The application server holds the dynamic data on the domain
+6. Incase the client wants to interact with the system database i.e sign up the application server communicates with the database (MySQL) which in return stores data and gives the necessary feedback
+
+SPOF:
+1. Traffic overload incase of increased clients
+2. Since the system does not incorporate a load balancer the server might experience traffic
+3. The clients may experience downtime during repair since it is a single server system
+4. Chances of low availability since there's only one database is high
+5. Downtime that is caused by lack of a back up database

@@ -1,0 +1,8 @@
+1. Firewalls come in handy to create a division between a private network and an outer network, often the internet, that manages traffic passing between the two networks. Firewalls allow, limit, and block network traffic based on preconfigured rules in the hardware or software, analyzing data packets that request entry to the network.
+
+2. Communications sent over the regular HTTP connections are in 'plain text' and can be read by any hacer that manages to enter our system. With a HTTPS connection all communications are securely encrypted. This means that if a hacker tried to break into our system they would not be able to decrypt any data which passes between the client and the server.
+
+3. The monitor is used to put and systematically track, measure and observe the operations on our servers. This is to draw the overall health condition of our server and ensure optimal performance.
+Monitors collect data by traking server activity by streaming event logs, also known as log files, which the server generates automatically
+
+4. SSL termination at load balancer is desired because decryption is resource and CPU intensive. Putting the decryption burden on the load balancer enables the server to spend processing power on application tasks, which helps improve power on application tasks, which helps improve performance and the management of SSL certificates.
