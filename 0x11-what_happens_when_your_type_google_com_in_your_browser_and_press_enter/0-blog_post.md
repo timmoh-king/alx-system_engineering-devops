@@ -4,7 +4,7 @@ This is an article that aims to explain the step-by-step process that occurs whe
 
 > [Web Infrastructure Diagram](./img_blog/web_infra.png):
 <div align="center">
-    <img src="./img_blog/web_infra.png" height="450" width="600"/>
+    <img src="./img_blog/web_infra.png" height="400" width="600"/>
 </div>
 
 
@@ -123,7 +123,7 @@ TCP/IP puts a lot of emphasis on accuracy, and it has several steps to ensure th
 Theoretically, TCP/IP divides the different communications tasks into layers. Each layer has a different function. Data goes through four individual layers before it is received on the other end. TCP/IP then goes through these layers in reverse order to reassemble the data and to present it to the recipient.
 
 <div align="center">
-    <img src="./img_blog/tcp_udp.jpg" height="450" width="600"/>
+    <img src="./img_blog/tcp_udp.jpg" height="400" width="600"/>
 </div>
 
 > *TCP/IP data packets transfer process*
@@ -159,12 +159,13 @@ sudo service nginx restart
 # create index.html file served out by server:
 echo 'Hello World!' | sudo tee /var/www/html/index.html > /dev/null
 ```
+> *The above code installs and configures `Nginx` as well as allows incoming connections to it from*
 
 4. **Application-Level Filtering**: Some firewalls perform application-level filtering to inspect and control web traffic. These firewalls can analyze the content of HTTP/HTTPS requests and responses. Organizations may have specific policies in place to monitor or block certain types of content or specific URLs, potentially including google.com.
 
 5. **IP Whitelisting/Blacklisting**: Firewalls can maintain lists of trusted or blocked IP addresses. In some cases, an organization may have specific IP addresses associated with google.com either whitelisted or blacklisted. Whitelisting allows access only from approved IP addresses, while blacklisting blocks access from specific IP addresses.
 
-
+<br/>
 
 ## HTTPS and SSL
 `HTTPS` (Hypertext Transfer Protocol Secure) uses `SSL` (Secure Sockets Layer) or `TLS` (Transport Layer Security) for securing a website or web application; [www.google.com](https://www.google.com) in this context. It ensures secure communication between the client(your browser) and the server by encrypting data transmission, preventing unauthorized interception or tampering.  SSL/TLS certificates are used to authenticate the server's identity and establish a secure connection. This encryption process safeguards sensitive information, such as login credentials or financial data, from potential eavesdropping or data breaches.
