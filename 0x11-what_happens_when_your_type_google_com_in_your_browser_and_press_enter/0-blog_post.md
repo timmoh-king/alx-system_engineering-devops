@@ -170,7 +170,7 @@ echo 'Hello World!' | sudo tee /var/www/html/index.html > /dev/null
 ## HTTPS and SSL
 `HTTPS` (Hypertext Transfer Protocol Secure) uses `SSL` (Secure Sockets Layer) or `TLS` (Transport Layer Security) for securing a website or web application; [www.google.com](https://www.google.com) in this context. It ensures secure communication between the client(your browser) and the server by encrypting data transmission, preventing unauthorized interception or tampering.  SSL/TLS certificates are used to authenticate the server's identity and establish a secure connection. This encryption process safeguards sensitive information, such as login credentials or financial data, from potential eavesdropping or data breaches.
 
-### `How Does HTTPS Work, Ey?`
+### `How Does HTTPS Work`
 HTTPS pages typically use one of two aforeamentioned protocols. Both the TLS and SSL protocols use what is known as an 'asymmetric' Public Key Infrastructure (PKI) system. An asymmetric system uses two 'keys' to encrypt communications, called a key-pair which includes a 'public' key and a 'private' key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa. Encryption means that the sender and recipient agree upon a "code" and translate their documents into random-looking character sequence strings which can only be deciphered with private keys.
 
 ### What a HTTPS certificate IS
@@ -221,7 +221,7 @@ backend backend_http
 " | sudo tee /etc/haproxy/haproxy.cfg > /dev/null
 ...
 ```
-> You don't have to understand the script above. But this is what it does: it specifies servers to send requests to in a round robin manner. The load balancer/HAProxy in this case stands in front of your servers and is hit first by the request, and it decides which server to send the rquest to.  
+> You don't have to understand the script above. But this is what it does: it specifies servers to send requests to in a round robin manner. The load balancer/HAProxy in this case stands in front of your servers and is hit first by the request, and it decides which server to send the request to.  
 
 > **Load-balancing example**:  
 >> Imagine a popular e-commerce website that experiences a surge in traffic during a holiday season sale. The website utilizes a load balancer to manage the increased influx of requests. The load balancer receives incoming requests from users and intelligently distributes them across several backend servers in the server farm. It uses an algorithm, such as round-robin, least connections, or weighted distribution, to determine which server should handle each request. This ensures that the workload is evenly distributed among the servers, optimizing resource utilization and preventing any single server from becoming overloaded.
@@ -259,7 +259,7 @@ Web applications often rely on databases to store and retrieve data. When proces
 
 
 ## Conclusion
-And that is about it! I hope this write-up provides insights, to you the reader, into how the internet functions and how web applications are delivered to end-users. I learned more about DNS as I prepped this. And I wished that by unraveling these technical details, you gain a deeper understanding of the complex processes that power the web. If you liked my stuff, buy me coffee :)
+And that is about it! I hope this write-up provides insights, to you the reader, into how the internet functions and how web applications are delivered to end-users. I learned more about DNS as I prepped this. And I wished that by unraveling these technical details, you gain a deeper understanding of the complex processes that power the web. `*stay foolish, stay hungry*` - [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) 
 
 
 ## References:
