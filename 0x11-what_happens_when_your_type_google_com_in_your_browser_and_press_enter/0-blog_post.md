@@ -259,7 +259,7 @@ Web applications often rely on databases to store and retrieve data. When proces
 
 
 ## Conclusion
-And that is about it! I hope this write-up provides insights, to you the reader, into how the internet functions and how web applications are delivered to end-users. I learned more about DNS as I prepped this. And I wished that by unraveling these technical details, you gain a deeper understanding of the complex processes that power the web. *stay foolish, stay hungry* - [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) 
+And that is about it! I hope this write-up provides insights, to you the reader, into how the internet functions and how web applications are delivered to end-users. I learned more about DNS as I prepped this. And I wished that by unraveling these technical details, you gain a deeper understanding of the complex processes that power the web. `stay foolish, stay hungry` - [Steve Jobs](https://en.wikipedia.org/wiki/Steve_Jobs) 
 
 
 ## References:
