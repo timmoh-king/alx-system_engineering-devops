@@ -9,6 +9,7 @@
 if __name__ == "__main__":
     import requests
     import sys
+    import csv
 
     user_id = sys.argv[1]
     baseurl = "https://jsonplaceholder.typicode.com/"
@@ -17,10 +18,6 @@ if __name__ == "__main__":
     
     users = requests.get(taskUrl, params={"userId": user_id})
     data = users.json()
-    # [print("{}".format(i)) for i in data if i.get('completed') is True]
-
-    # for i in data:
-    #     print("Task Name:", i['title'])
 
     [print("{}".format(i)) for i in data]
     print("----------------------------------------------------------------------------------")
@@ -28,3 +25,13 @@ if __name__ == "__main__":
     print("----------------------------------------------------------------------------------")
     title = [i.get('title') for i in data if i.get("completed") is False]
     [print("\t{}".format(i)) for i in title]
+    print("***********************************************************************************")
+    print("{}".format(len(title)))
+
+    with open('id.csv', 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+
+        [writer.writerow([i.get('userId'),
+                            i.get('id'),
+                            i.get('title'),
+                            i.get('completed')]) for i in data]
