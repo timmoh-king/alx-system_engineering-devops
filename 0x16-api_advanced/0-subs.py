@@ -1,4 +1,4 @@
-
+#!/usr/bin/python3
 """
     Prototype: def number_of_subscribers(subreddit)
     If not a valid subreddit, return 0
